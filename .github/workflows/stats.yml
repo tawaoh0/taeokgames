@@ -1,0 +1,28 @@
+name: Relevé des stats Roblox
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'     # toutes les 6 h (UTC) ; change à ta guise
+  workflow_dispatch:           # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/fetch-stats.mjs
+      - name: Commit si les chiffres ont changé
+        run: |
+          git config user.name "stats-bot"
+          git config user.email "stats-bot@users.noreply.github.com"
+          git add site/data/stats.json
+          # sans changement réel (hors date de relevé) on ne commit pas
+          if git diff --cached --quiet; then echo "Rien à commiter"; exit 0; fi
+          git commit -m "chore: relevé des stats [skip ci]"
+          git push

@@ -1,0 +1,12 @@
+# Netlify ne fait que servir le dossier site/ : aucun build, aucune fonction, aucun relevé de stats.
+# Les stats sont mises à jour par GitHub Actions (gratuit) et lues par le site au chargement.
+[build]
+  publish = "site"
+  # Ne redéploie QUE si le site lui-même change (pas le bot Discord, pas les données de stats) → économise les crédits.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- site ':(exclude)site/data' netlify.toml"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

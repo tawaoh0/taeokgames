@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Taeok games — Communauté de créateurs Roblox</title>
+<meta name="description" content="Taeok games : le groupe qui crée des serveurs et des jeux Roblox. Rejoins la communauté, joue à nos jeux, participe aux events et aide-nous à construire les prochains.">
+<meta name="theme-color" content="#07060f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Taeok games — Communauté de créateurs Roblox">
+<meta property="og:description" content="Nos jeux Roblox, leurs stats, nos events. Rejoins la commu.">
+<meta property="og:image" content="https://tr.rbxcdn.com/180DAY-6f21d18908ff9edd6009a71dd50097f0/768/432/Image/Png/noFilter">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='2' y='2' width='20' height='20' rx='7' fill='%237c3aed'/><circle cx='12' cy='12' r='5' fill='%2322d3ee'/><circle cx='12' cy='12' r='2.2' fill='%23f5e642'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=16">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" id="glow" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Taeok games">
+    <span class="brand-cube" aria-hidden="true"></span>
+    <span>TAEOK<em>games</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#jeux">Jeux</a>
+    <a href="#events">Events</a>
+    <a href="#equipe">Équipe</a>
+    <a href="#rejoindre">Rejoindre</a>
+    <a href="stats.html">Stats</a>
+  </nav>
+  <a class="btn btn-sm" id="nav-discord" href="#" target="_blank" rel="noopener">Discord</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="top">
+
+  <!-- HERO : titre + boutons, puis le défilé de nos jeux juste en dessous -->
+  <section class="hero">
+    <h1 class="reveal">On construit <span class="shine">des mondes.</span><br>Viens jouer.</h1>
+    <p class="lead reveal">Des builders et des scripteurs qui créent des jeux Roblox. Rejoins le Discord, teste nos jeux en avant-première et viens construire avec nous.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-big" id="hero-discord" href="#" target="_blank" rel="noopener">Rejoindre le Discord</a>
+      <a class="btn btn-ghost btn-big" id="hero-roblox" href="#" target="_blank" rel="noopener">Groupe Roblox</a>
+    </div>
+    <div class="reel reveal" id="reel" aria-label="Aperçu de nos jeux"></div>
+  </section>
+
+  <section class="stats-band">
+    <ul class="stats reveal" id="stats"></ul>
+  </section>
+
+  <!-- JEU MIS EN AVANT -->
+  <section class="featured-wrap" id="featured" aria-label="Jeu mis en avant"></section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+  <!-- JEUX -->
+  <section class="section" id="jeux">
+    <div class="section-head">
+      <h2>Nos <span class="shine">jeux</span></h2>
+      <a class="more" href="stats.html">Toutes les stats →</a>
+    </div>
+    <div class="games" id="games"></div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section section-alt" id="events">
+    <div class="section-head">
+      <h2>Events <span class="shine">&amp; actus</span></h2>
+    </div>
+    <ol class="timeline" id="events-list"></ol>
+    <button class="btn btn-ghost events-more" id="events-more" hidden></button>
+  </section>
+
+  <!-- ÉQUIPE -->
+  <section class="section" id="equipe">
+    <div class="section-head">
+      <h2>L’<span class="shine">équipe</span></h2>
+    </div>
+    <div class="team" id="team"></div>
+  </section>
+
+  <!-- REJOINDRE -->
+  <section class="section join" id="rejoindre">
+    <div class="join-card">
+      <div>
+        <p class="kicker">Recrutement ouvert</p>
+        <h2>Tu build ? Tu script ?<br><span class="shine">Tu joues ?</span></h2>
+        <p class="lead">Peu importe ton niveau. On cherche des builders, des scripteurs Luau, des testeurs et des gens motivés pour animer la commu. Passe sur le Discord, présente-toi dans <code>#présentations</code>, et on t'ouvre les portes.</p>
+      </div>
+      <ul class="roles" id="roles"></ul>
+      <div class="join-cta">
+        <a class="btn btn-big" id="join-discord" href="#" target="_blank" rel="noopener">Rejoindre le Discord</a>
+        <a class="btn btn-ghost" href="#regles">Lire les règles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÈGLES -->
+  <section class="section" id="regles">
+    <div class="section-head">
+      <h2>Les <span class="shine">règles</span></h2>
+    </div>
+    <ol class="rules" id="rules"></ol>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="brand"><span class="brand-cube" aria-hidden="true"></span><span>TAEOK<em>games</em></span></div>
+  <p>Communauté indépendante. Roblox est une marque de Roblox Corporation — on n'est pas affiliés.</p>
+  <div class="footer-links" id="footer-links"></div>
+</footer>
+
+<script src="js/fx.js?v=16"></script>
+<script src="js/data.js?v=16"></script>
+<script src="js/app.js?v=16"></script>
+</body>
+</html>

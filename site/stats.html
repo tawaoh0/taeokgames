@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Stats — Taeok games</title>
+<meta name="description" content="Les statistiques de tous les jeux Roblox de Taeok games : visites, favoris, likes, classement.">
+<meta name="theme-color" content="#07060f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stats — Taeok games">
+<meta property="og:description" content="Visites, favoris, likes et classement de tous nos jeux Roblox.">
+<meta property="og:image" content="https://tr.rbxcdn.com/180DAY-6f21d18908ff9edd6009a71dd50097f0/768/432/Image/Png/noFilter">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='2' y='2' width='20' height='20' rx='7' fill='%237c3aed'/><circle cx='12' cy='12' r='5' fill='%2322d3ee'/><circle cx='12' cy='12' r='2.2' fill='%23f5e642'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=16">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" id="glow" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Taeok games">
+    <span class="brand-cube" aria-hidden="true"></span>
+    <span>TAEOK<em>games</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#jeux">Jeux</a>
+    <a href="index.html#events">Events</a>
+    <a href="stats.html" class="active" aria-current="page">Stats</a>
+  </nav>
+  <a class="btn btn-sm" id="nav-discord" href="#" target="_blank" rel="noopener">Discord</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="page-hero">
+    <p class="kicker">Relevé Roblox · <span id="updated">—</span></p>
+    <h1>Les <span class="shine">stats</span> de<br>tous nos jeux.</h1>
+  </section>
+
+  <section class="kpis" id="kpis" aria-label="Totaux"></section>
+
+  <section class="block" id="share-block" aria-label="Répartition des visites">
+    <h2 class="block-title">Répartition des visites</h2>
+    <div class="share spot reveal" id="share"></div>
+    <ul class="legend" id="legend"></ul>
+  </section>
+
+  <section class="block" aria-label="Classement">
+    <div class="block-head">
+      <h2 class="block-title">Classement</h2>
+      <div class="chips" id="chips" role="group" aria-label="Trier par"></div>
+    </div>
+    <ol class="rank-list" id="rank"></ol>
+    <p class="note" id="note"></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="brand"><span class="brand-cube" aria-hidden="true"></span><span>TAEOK<em>games</em></span></div>
+  <p>Chiffres publics Roblox, relevés à intervalles réguliers. Communauté indépendante, non affiliée à Roblox Corporation.</p>
+  <div class="footer-links"><a href="index.html">accueil</a></div>
+</footer>
+
+<script src="js/fx.js?v=16"></script>
+<script src="js/data.js?v=16"></script>
+<script src="js/stats-page.js?v=16"></script>
+</body>
+</html>

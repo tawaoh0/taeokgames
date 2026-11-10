@@ -1,0 +1,261 @@
+{
+  "roles": [
+    {
+      "name": "👑 Fondateur",
+      "color": "#f5e642",
+      "hoist": true,
+      "permissions": [
+        "Administrator"
+      ]
+    },
+    {
+      "name": "🛡️ Staff",
+      "color": "#ff5c3a",
+      "hoist": true,
+      "permissions": [
+        "ManageMessages",
+        "ManageChannels",
+        "KickMembers",
+        "BanMembers",
+        "ModerateMembers",
+        "ManageNicknames"
+      ]
+    },
+    {
+      "name": "🧱 Builder",
+      "color": "#4fd1ff",
+      "hoist": true
+    },
+    {
+      "name": "⌨️ Scripteur",
+      "color": "#b47bff",
+      "hoist": true
+    },
+    {
+      "name": "🎮 Testeur",
+      "color": "#7cf58a",
+      "hoist": false
+    },
+    {
+      "name": "⭐ Membre",
+      "color": "#9a968e",
+      "hoist": false
+    }
+  ],
+  "categories": [
+    {
+      "name": "📌 ACCUEIL",
+      "channels": [
+        {
+          "name": "bienvenue",
+          "readOnly": true,
+          "topic": "Bienvenue ! Lis les règles et présente-toi."
+        },
+        {
+          "name": "règles",
+          "readOnly": true,
+          "topic": "Réagis ✅ pour accepter les règles."
+        },
+        {
+          "name": "annonces",
+          "readOnly": true,
+          "topic": "Sorties, mises à jour, events."
+        },
+        {
+          "name": "présentations",
+          "topic": "Qui es-tu, ce que tu joues, ce que tu veux faire ici."
+        }
+      ]
+    },
+    {
+      "name": "🎮 NOS JEUX",
+      "channels": [
+        {
+          "name": "liens-jeux",
+          "readOnly": true,
+          "topic": "Tous nos jeux Roblox."
+        },
+        {
+          "name": "nouveautés",
+          "readOnly": true,
+          "topic": "Patch notes."
+        },
+        {
+          "name": "bugs",
+          "topic": "Un bug = un message : jeu + description + screenshot."
+        },
+        {
+          "name": "idées",
+          "topic": "Tes suggestions pour nos jeux."
+        },
+        {
+          "name": "playtests",
+          "topic": "Réservé aux testeurs.",
+          "onlyRoles": [
+            "🎮 Testeur",
+            "🧱 Builder",
+            "⌨️ Scripteur",
+            "🛡️ Staff"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "💬 COMMUNAUTÉ",
+      "channels": [
+        {
+          "name": "général"
+        },
+        {
+          "name": "screens-et-clips",
+          "topic": "Captures, vidéos, moments funs."
+        },
+        {
+          "name": "cherche-équipe",
+          "topic": "Trouve des gens avec qui jouer."
+        },
+        {
+          "name": "hors-sujet"
+        },
+        {
+          "name": "memes"
+        }
+      ]
+    },
+    {
+      "name": "🛠️ STUDIO",
+      "onlyRoles": [
+        "🧱 Builder",
+        "⌨️ Scripteur",
+        "🛡️ Staff"
+      ],
+      "channels": [
+        {
+          "name": "dev-général",
+          "topic": "Organisation, todo, qui fait quoi."
+        },
+        {
+          "name": "build",
+          "topic": "Modèles, maps, assets."
+        },
+        {
+          "name": "scripts",
+          "topic": "Luau, aide, revue de code."
+        },
+        {
+          "name": "ressources",
+          "topic": "Tutos, plugins, liens utiles."
+        }
+      ]
+    },
+    {
+      "name": "🔊 VOCAUX",
+      "channels": [
+        {
+          "name": "🔊 Salon principal",
+          "type": "voice"
+        },
+        {
+          "name": "🎮 Jeu 1",
+          "type": "voice"
+        },
+        {
+          "name": "🎮 Jeu 2",
+          "type": "voice"
+        },
+        {
+          "name": "🛠️ Studio",
+          "type": "voice",
+          "onlyRoles": [
+            "🧱 Builder",
+            "⌨️ Scripteur",
+            "🛡️ Staff"
+          ]
+        },
+        {
+          "name": "🎤 Event",
+          "type": "voice"
+        },
+        {
+          "name": "😴 AFK",
+          "type": "voice"
+        }
+      ]
+    },
+    {
+      "name": "🔒 STAFF",
+      "onlyRoles": [
+        "🛡️ Staff"
+      ],
+      "channels": [
+        {
+          "name": "staff-chat"
+        },
+        {
+          "name": "logs-modération",
+          "readOnly": true
+        },
+        {
+          "name": "tickets"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Respect avant tout. Zéro insulte, zéro harcèlement, zéro discrimination.",
+    "Pas de spam, pas de pub pour d'autres serveurs sans accord du staff.",
+    "Pas de triche, d'exploits ou de scripts malveillants sur nos jeux.",
+    "Les bugs se signalent dans #bugs, pas en vocal à 3h du matin.",
+    "Le staff a le dernier mot. Un souci ? Ouvre un ticket dans #tickets."
+  ],
+  "games": [
+    {
+      "name": "Terravora",
+      "genre": "Guerre de territoires",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/97611163590541/"
+    },
+    {
+      "name": "Shroom Forge",
+      "genre": "Idle · Collection",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/86062750127411/"
+    },
+    {
+      "name": "Break Up Ores",
+      "genre": "Simulateur · Minage",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/137524381681414/"
+    },
+    {
+      "name": "Mining Extraction Empire",
+      "genre": "Tycoon · Minage",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/72176707842436/"
+    },
+    {
+      "name": "Steal an EGG in another World",
+      "genre": "Aventure · Œufs",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/104628684949493/"
+    },
+    {
+      "name": "Steal an Egg of KAIJU",
+      "genre": "Œufs · Vol",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/76816035021821/"
+    },
+    {
+      "name": "Pocket KAIJU Evolution",
+      "genre": "Capture · Tour par tour",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/117575285552293/"
+    },
+    {
+      "name": "Merge a Horde of Easter Eggs",
+      "genre": "Fusion · Défense",
+      "status": "🟢 En ligne",
+      "url": "https://www.roblox.com/fr/games/104360879576033/"
+    }
+  ]
+}
