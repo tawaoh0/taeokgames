@@ -19,21 +19,16 @@ window.TAEOK = {
     { value: 100,  suffix: '%', label: 'fait maison' },
   ],
 
-  // Jeu mis en avant (incrustation sous le hero).
-  // Images : icône + miniature officielles Roblox (Shroom Forge : place 86062750127411 / universe 10766858874).
-  featured: {
-    name: 'Shroom Forge',
-    tagline: 'Idle · Collection',
-    desc: 'Invoque des créatures, forge ton équipement et affronte des raids et des boss. Complète ta collection, explore de nouvelles zones et deviens le plus puissant.',
-    url: 'https://www.roblox.com/fr/games/86062750127411/Shroom-Forge',
-    icon: 'https://tr.rbxcdn.com/180DAY-839655529f2847e1016e3eaccb367cb0/512/512/Image/Png/noFilter',
-    thumb: 'https://tr.rbxcdn.com/180DAY-6f21d18908ff9edd6009a71dd50097f0/768/432/Image/Png/noFilter',
-    tags: ['Invocation', 'Raids', 'Boss', 'Guildes'],
-  },
+  // Le jeu « à la une » est choisi automatiquement : c'est le dernier jeu créé (voir `released` / date de création Roblox).
 
   marquee: ['Build', 'Script Luau', 'Playtests', 'Events', 'Tournois', 'Sessions live', 'Recrutement ouvert'],
 
   // status : 'live' | 'beta' | 'soon'
+  // Chaque jeu a sa page (jeu.html?g=<nom-du-jeu>). Deux listes à remplir à la main, par jeu :
+  //   banner:  'img/mon-jeu.jpg'   // (facultatif) ta propre bannière 16:9, à déposer dans site/img/ ; utilisée à la une, dans le défilé et la galerie
+  //   codes:   [{ code: 'WELCOME', reward: '500 gemmes', expires: '2026-12-31' }]   // expires: null = sans limite ; expired: true pour forcer « expiré »
+  //   updates: [{ date: '2026-11-05', title: 'Les guildes', notes: ['Ajout des guildes', 'Correctifs'] }]
+  // Les dates de mise à jour Roblox, elles, sont ajoutées toutes seules au fil des relevés.
   games: [
     {
       name: 'Terravora',
@@ -44,6 +39,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/97611163590541/',
       tags: ['PvP', 'Ranks', 'Stratégie'],
       icon: 'https://tr.rbxcdn.com/180DAY-ee9a4f945c0634e15600a174af277069/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#f5e642',
     },
     {
@@ -54,6 +51,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/86062750127411/',
       tags: ['Invocation', 'Raids', 'Guildes'],
       icon: 'https://tr.rbxcdn.com/180DAY-839655529f2847e1016e3eaccb367cb0/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#b47bff',
     },
     {
@@ -64,6 +63,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/137524381681414/',
       tags: ['Minage', 'Gemmes', 'Simulateur'],
       icon: 'https://tr.rbxcdn.com/180DAY-c63f9c243ad98160245fd0d5d4007e8f/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#4fd1ff',
     },
     {
@@ -74,6 +75,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/72176707842436/',
       tags: ['Tycoon', 'Minage', 'Ouvriers'],
       icon: 'https://tr.rbxcdn.com/180DAY-92367f97eb6e34acc4a227b609cc2a06/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#ff9f43',
     },
     {
@@ -84,6 +87,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/104628684949493/',
       tags: ['Œufs', 'Exploration', 'Créatures'],
       icon: 'https://tr.rbxcdn.com/180DAY-66cbab671db68d7b4be6568d16c261a1/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#7cf58a',
     },
     {
@@ -94,6 +99,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/76816035021821/',
       tags: ['Kaiju', 'Vol', '36 espèces'],
       icon: 'https://tr.rbxcdn.com/180DAY-e784bf2bb4cd9557078230b9abd27efc/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#ff5c3a',
     },
     {
@@ -104,6 +111,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/117575285552293/',
       tags: ['Capture', 'Tour par tour', 'Arènes'],
       icon: 'https://tr.rbxcdn.com/180DAY-b4ffddb2904eacbfb2c9699e3961aaac/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#22d3ee',
     },
     {
@@ -114,6 +123,8 @@ window.TAEOK = {
       url: 'https://www.roblox.com/fr/games/104360879576033/',
       tags: ['Fusion', 'Défense', 'Voxel'],
       icon: 'https://tr.rbxcdn.com/180DAY-ae20988fa2a454dba9f2c1c3d8116eb8/512/512/Image/Png/noFilter',
+      codes: [],
+      updates: [],
       color: '#f472b6',
     },
     // Carte « Bientôt » : remplace-la par le prochain jeu quand il sort.

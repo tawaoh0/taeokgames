@@ -86,7 +86,8 @@ window.FX = (() => {
     for (const [pid, g] of Object.entries(j.games)) {
       games[pid] = { ...g,
         visits: +g.visits || 0, playing: +g.playing || 0, favorites: +g.favorites || 0, up: +g.up || 0, down: +g.down || 0,
-        icon: CDN.test(g.icon) ? g.icon : null, thumbs: (g.thumbs || []).filter((u) => CDN.test(u)) };
+        updateLog: (Array.isArray(g.updateLog) ? g.updateLog : []).map(String).slice(0, 30),
+        icon: CDN.test(g.icon) ? g.icon : null, thumbs: (g.thumbs || []).filter((u) => CDN.test(u) && /\/Image\//.test(u)) };
     }
     return { updatedAt: j.updatedAt, games };
   };
@@ -104,5 +105,7 @@ window.FX = (() => {
     return [a, b].filter(Boolean).sort((x, y) => String(y.updatedAt).localeCompare(String(x.updatedAt)))[0] || null;
   };
 
-  return { $, esc, nf, init, reveal, countUp, still, loadStats };
+  const slug = (name) => String(name).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+  return { $, esc, nf, init, reveal, countUp, still, loadStats, slug };
 })();

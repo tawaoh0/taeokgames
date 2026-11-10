@@ -1,5 +1,5 @@
 (async () => {
-  const { $, esc, nf, init, reveal, loadStats } = window.FX;
+  const { $, esc, nf, init, reveal, loadStats, slug } = window.FX;
   const D = window.TAEOK, S = await loadStats();
 
   // ── Données : stats Roblox rattachées à chaque jeu, tri par visites ──
@@ -37,10 +37,9 @@
 
   // ── Showreel : captures de nos jeux qui défilent en 3D ────
   const shots = [];
-  // Un jeu avec moins de 2 captures (ex. tout juste sorti : l'image Roblox peut être un gris par défaut)
-  // est représenté par une tuile « icône » plutôt qu'une capture douteuse.
-  const pools = real.filter((g) => g.st).map((g) => g.st.thumbs.length >= 2
-    ? g.st.thumbs.map((src) => ({ src, name: g.name, url: g.url }))
+  // Un jeu sans aucune capture (image) — par ex. seulement une vidéo — est représenté par une tuile « icône ».
+  const pools = real.filter((g) => g.st).map((g) => (g.banner ? [g.banner] : []).concat(g.st.thumbs).length
+    ? (g.banner ? [g.banner] : []).concat(g.st.thumbs).map((src) => ({ src, name: g.name, url: g.url }))
     : [{ icon: g.icon || g.st.icon, color: g.color, name: g.name, url: g.url }]);
   for (let k = 0; pools.some((p) => k < p.length); k++) pools.forEach((p) => p[k] && shots.push(p[k]));
   if (shots.length >= 6) {
@@ -48,36 +47,40 @@
     $('#reel').innerHTML = `<div class="reel-tilt">` + Array.from({ length: ROWS }, (_, r) => {
       const tiles = shots.filter((_, i) => i % ROWS === r).map((s) =>
         s.icon
-          ? `<a class="reel-tile reel-icon spot" style="--c:${esc(s.color)}" href="${esc(s.url)}" target="_blank" rel="noopener" tabindex="-1"><img class="ic" src="${esc(s.icon)}" alt="" decoding="async"><span>${esc(s.name)}</span></a>`
+          ? `<a class="reel-tile reel-icon spot" style="--c:${esc(s.color)};--bg:url('${esc(s.icon)}')" href="${esc(s.url)}" target="_blank" rel="noopener" tabindex="-1"><img class="ic" src="${esc(s.icon)}" alt="" decoding="async"><span>${esc(s.name)}</span></a>`
           : `<a class="reel-tile spot" href="${esc(s.url)}" target="_blank" rel="noopener" tabindex="-1"><img src="${esc(s.src)}" alt="" decoding="async"><span>${esc(s.name)}</span></a>`).join('');
       return `<div class="reel-row r${r}"><div class="reel-track">${tiles}${tiles}</div></div>`;
     }).join('') + `</div>`;
   } else { $('#reel').remove(); }
 
-  // ── Jeu mis en avant ─────────────────────────────────────
-  if (D.featured) {
-    const f = D.featured;
+  // ── Jeu à la une = toujours le dernier jeu créé ──────────
+  const releaseDate = (g) => g.released || (g.st && g.st.created && g.st.created.slice(0, 10)) || '';
+  const latest = [...real].sort((a, b) => releaseDate(b).localeCompare(releaseDate(a)))[0];
+  if (latest) {
+    const f = latest, icon = f.icon || (f.st && f.st.icon);
+    // pas d'image de présentation (seulement une vidéo) : on montre l'icône à la place
+    const shot = f.banner || (f.st && f.st.thumbs.length >= 1 ? f.st.thumbs[0] : null);
     $('#featured').innerHTML = `
-      <article class="featured spot reveal">
-        <a class="featured-media" href="${esc(f.url)}" target="_blank" rel="noopener" aria-label="Jouer à ${esc(f.name)}">
-          <img src="${esc(f.thumb)}" alt="" loading="lazy">
+      <article class="featured spot reveal" style="--c:${esc(f.color)}">
+        <a class="featured-media${shot ? '' : ' icon-mode'}" style="--bg:url('${esc(icon)}')" href="${esc(f.url)}" target="_blank" rel="noopener" aria-label="Jouer à ${esc(f.name)}">
+          ${shot ? `<img src="${esc(shot)}" alt="" loading="lazy">` : `<img class="big-icon" src="${esc(icon)}" alt="" loading="lazy">`}
           <span class="featured-play">▶</span>
         </a>
         <div class="featured-body">
-          <p class="kicker">À la une · sur Roblox</p>
+          <p class="kicker">À la une · dernier jeu sorti</p>
           <div class="featured-title">
-            <img class="featured-icon" src="${esc(f.icon)}" alt="" loading="lazy">
-            <div><h2>${esc(f.name)}</h2><span>${esc(f.tagline)}</span></div>
+            <img class="featured-icon" src="${esc(icon)}" alt="" loading="lazy">
+            <div><h2>${esc(f.name)}</h2><span>${esc(f.genre)}</span></div>
           </div>
           <p class="featured-desc">${esc(f.desc)}</p>
           <ul class="tags">${f.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
           <div class="featured-cta">
             <a class="btn" href="${esc(f.url)}" target="_blank" rel="noopener">Jouer sur Roblox →</a>
-            <a class="btn btn-ghost" href="${esc(D.links.discord)}" target="_blank" rel="noopener">Discord</a>
+            <a class="btn btn-ghost" href="jeu.html?g=${slug(f.name)}">Codes · infos</a>
           </div>
         </div>
       </article>`;
-  }
+  } else { $('#featured').remove(); }
 
   // ── Marquee ──────────────────────────────────────────────
   $('#marquee').innerHTML = [...D.marquee, ...D.marquee].map((t) => `<span>${esc(t)}</span><i>◆</i>`).join('');
@@ -89,7 +92,6 @@
       <article class="game game-soon reveal" style="--accent:${esc(g.color)};--i:${i}" aria-label="Jeu à venir">
         <span class="soon-mark">?</span><h3>Bientôt</h3>
       </article>`;
-    const st = g.st, lk = st && like(st);
     return `
       <article class="game spot reveal" style="--accent:${esc(g.color)};--i:${i}">
         <div class="game-head">
@@ -102,14 +104,12 @@
         </div>
         <h3>${esc(g.name)}</h3>
         <p>${esc(g.desc)}</p>
-        ${st ? `<ul class="gstats">
-          <li><b>${nf.format(st.visits)}</b><span>visites</span></li>
-          <li><b>${nf.format(st.favorites)}</b><span>favoris</span></li>
-          <li><b>${lk === null ? '—' : lk + ' %'}</b><span>likes</span></li>
-        </ul>` : ''}
         <ul class="tags">${g.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
-        ${g.url ? `<a class="btn btn-sm" href="${esc(g.url)}" target="_blank" rel="noopener">Jouer →</a>`
-                : `<span class="btn btn-sm btn-disabled">En développement</span>`}
+        <div class="card-cta">
+          ${g.url ? `<a class="btn btn-sm" href="${esc(g.url)}" target="_blank" rel="noopener">Jouer →</a>`
+                  : `<span class="btn btn-sm btn-disabled">En développement</span>`}
+          <a class="btn btn-sm btn-ghost" href="jeu.html?g=${slug(g.name)}">Codes · infos</a>
+        </div>
       </article>`;
   }).join('');
 

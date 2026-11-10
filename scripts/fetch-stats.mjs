@@ -5,7 +5,7 @@
 // donc les chiffres ici, puis le site les lit comme un fichier statique.
 // Lancé chaque jour par GitHub Actions (.github/workflows/stats.yml) : aucun build Netlify nécessaire.
 // ─────────────────────────────────────────────────────────────
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 
 const GROUP_ID = process.env.GROUP_ID || '541274555';
 const OUT = new URL('../site/data/stats.json', import.meta.url);
@@ -33,8 +33,11 @@ const [details, votes, icons, thumbs] = await Promise.all([
 
 const voteBy = Object.fromEntries(votes.data.map((v) => [v.id, v]));
 const iconBy = Object.fromEntries(icons.data.map((i) => [i.targetId, i.imageUrl]));
-const thumbBy = Object.fromEntries(thumbs.data.map((t) => [t.universeId, t.thumbnails.filter((x) => x.state === 'Completed' && x.imageUrl).map((x) => x.imageUrl)]));
+const thumbBy = Object.fromEntries(thumbs.data.map((t) => [t.universeId, t.thumbnails.filter((x) => x.state === 'Completed' && x.imageUrl && /\/Image\//.test(x.imageUrl)).map((x) => x.imageUrl)]));
 
+// Journal des mises à jour : Roblox n'expose que la DERNIÈRE date, on garde donc l'historique nous-mêmes
+// en mémorisant chaque nouvelle date vue d'un relevé à l'autre.
+const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')).games || {} : {};
 const games = {};
 for (const g of details.data) {
   games[g.rootPlaceId] = {
@@ -47,6 +50,7 @@ for (const g of details.data) {
     down: voteBy[g.id]?.downVotes ?? 0,
     created: g.created,
     updated: g.updated,
+    updateLog: [...new Set([g.updated, ...(prev[g.rootPlaceId]?.updateLog || [])])].filter(Boolean).sort().reverse().slice(0, 30),
     icon: iconBy[g.id] || null,
     thumbs: thumbBy[g.id] || [],
   };
