@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-11T13:28:25.333Z",
+ "updatedAt": "2026-11-11T23:58:36.351Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -149,14 +149,15 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "Mining Extraction Empire",
-   "playing": 5,
-   "visits": 1485,
-   "favorites": 36,
-   "up": 2,
+   "playing": 9,
+   "visits": 2061,
+   "favorites": 61,
+   "up": 3,
    "down": 1,
    "created": "2026-11-03T08:41:13.267Z",
-   "updated": "2026-11-10T14:12:00.183Z",
+   "updated": "2026-11-11T22:09:14.68Z",
    "updateLog": [
+    "2026-11-11T22:09:14.68Z",
     "2026-11-10T14:12:00.183Z"
    ],
    "icon": "https://tr.rbxcdn.com/180DAY-92367f97eb6e34acc4a227b609cc2a06/512/512/Image/Png/noFilter",
