@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-12T06:38:11.467Z",
+ "updatedAt": "2026-11-12T19:28:09.769Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -108,7 +108,7 @@
    "universeId": 10770854188,
    "name": "Pocket KAIJU Evolution",
    "playing": 0,
-   "visits": 268,
+   "visits": 269,
    "favorites": 2,
    "up": 2,
    "down": 0,
@@ -149,14 +149,15 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "Mining Extraction Empire",
-   "playing": 5,
-   "visits": 2386,
-   "favorites": 71,
+   "playing": 3,
+   "visits": 3159,
+   "favorites": 90,
    "up": 3,
    "down": 1,
    "created": "2026-11-03T08:41:13.267Z",
-   "updated": "2026-11-11T22:09:14.68Z",
+   "updated": "2026-11-12T19:16:43.199Z",
    "updateLog": [
+    "2026-11-12T19:16:43.199Z",
     "2026-11-11T22:09:14.68Z",
     "2026-11-10T14:12:00.183Z"
    ],
