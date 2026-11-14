@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-14T12:53:40.211Z",
+ "updatedAt": "2026-11-14T21:55:27.641Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -47,7 +47,7 @@
    "universeId": 10768369970,
    "name": "Break up ores",
    "playing": 0,
-   "visits": 707,
+   "visits": 708,
    "favorites": 12,
    "up": 3,
    "down": 3,
@@ -148,15 +148,16 @@
   },
   "72176707842436": {
    "universeId": 10774476701,
-   "name": "Mining Extraction Empire",
-   "playing": 10,
-   "visits": 4962,
-   "favorites": 156,
+   "name": "⛏️ Mining Tycoon: Stone Empire",
+   "playing": 5,
+   "visits": 5525,
+   "favorites": 176,
    "up": 3,
    "down": 1,
    "created": "2026-11-03T08:41:13.267Z",
-   "updated": "2026-11-14T12:51:30.901Z",
+   "updated": "2026-11-14T21:53:56.503Z",
    "updateLog": [
+    "2026-11-14T21:53:56.503Z",
     "2026-11-14T12:51:30.901Z",
     "2026-11-13T21:12:43.095Z",
     "2026-11-13T13:46:20.912Z",
@@ -166,7 +167,9 @@
     "2026-11-10T14:12:00.183Z"
    ],
    "icon": "https://tr.rbxcdn.com/180DAY-92367f97eb6e34acc4a227b609cc2a06/512/512/Image/Png/noFilter",
-   "thumbs": []
+   "thumbs": [
+    "https://tr.rbxcdn.com/180DAY-0d8c58e444a5a608477dfd725bcdd681/768/432/Image/Png/noFilter"
+   ]
   }
  }
 }
