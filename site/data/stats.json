@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-15T04:32:39.578Z",
+ "updatedAt": "2026-11-15T13:21:53.930Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -26,7 +26,7 @@
    "universeId": 10766858874,
    "name": "[🎃] Shroom Forge simulator ",
    "playing": 0,
-   "visits": 1472,
+   "visits": 1473,
    "favorites": 41,
    "up": 10,
    "down": 11,
@@ -149,14 +149,15 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "⛏️ Mining Tycoon: Stone Empire",
-   "playing": 7,
-   "visits": 5918,
-   "favorites": 182,
+   "playing": 10,
+   "visits": 6516,
+   "favorites": 196,
    "up": 3,
    "down": 1,
    "created": "2026-11-03T08:41:13.267Z",
-   "updated": "2026-11-14T22:30:12.051Z",
+   "updated": "2026-11-15T13:14:27.667Z",
    "updateLog": [
+    "2026-11-15T13:14:27.667Z",
     "2026-11-14T22:30:12.051Z",
     "2026-11-14T21:53:56.503Z",
     "2026-11-14T12:51:30.901Z",
