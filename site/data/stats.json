@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-18T23:49:52.702Z",
+ "updatedAt": "2026-11-19T05:40:59.263Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -108,7 +108,7 @@
    "universeId": 10770854188,
    "name": "Pocket KAIJU Evolution",
    "playing": 0,
-   "visits": 269,
+   "visits": 270,
    "favorites": 2,
    "up": 2,
    "down": 0,
@@ -149,9 +149,9 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "⛏️ Mining Tycoon: Stone Empire",
-   "playing": 10,
-   "visits": 11632,
-   "favorites": 365,
+   "playing": 9,
+   "visits": 11987,
+   "favorites": 381,
    "up": 6,
    "down": 3,
    "created": "2026-11-03T08:41:13.267Z",
