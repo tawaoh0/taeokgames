@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-20T00:13:36.072Z",
+ "updatedAt": "2026-11-20T14:48:34.598Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -68,7 +68,7 @@
    "universeId": 10768596354,
    "name": "Steal an EGG in another World 🌏",
    "playing": 0,
-   "visits": 1376,
+   "visits": 1379,
    "favorites": 4,
    "up": 4,
    "down": 4,
@@ -149,14 +149,15 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "⛏️ Mining Tycoon: Stone Empire",
-   "playing": 8,
-   "visits": 13147,
-   "favorites": 405,
-   "up": 7,
+   "playing": 12,
+   "visits": 14091,
+   "favorites": 433,
+   "up": 8,
    "down": 5,
    "created": "2026-11-03T08:41:13.267Z",
-   "updated": "2026-11-20T00:12:29.797Z",
+   "updated": "2026-11-20T00:16:33.848Z",
    "updateLog": [
+    "2026-11-20T00:16:33.848Z",
     "2026-11-20T00:12:29.797Z",
     "2026-11-19T14:24:34.437Z",
     "2026-11-18T20:21:46.481Z",
