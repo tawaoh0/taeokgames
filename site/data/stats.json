@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-21T14:05:16.713Z",
+ "updatedAt": "2026-11-21T22:42:46.243Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -87,7 +87,7 @@
    "universeId": 10768642757,
    "name": "Steal an egg of KAIJU 🦖",
    "playing": 0,
-   "visits": 1116,
+   "visits": 1117,
    "favorites": 16,
    "up": 6,
    "down": 3,
@@ -149,14 +149,15 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "⛏️ Mining Tycoon: Stone Empire",
-   "playing": 33,
-   "visits": 15121,
-   "favorites": 479,
-   "up": 10,
-   "down": 5,
+   "playing": 11,
+   "visits": 15984,
+   "favorites": 523,
+   "up": 12,
+   "down": 7,
    "created": "2026-11-03T08:41:13.267Z",
-   "updated": "2026-11-21T12:33:09.021Z",
+   "updated": "2026-11-21T21:18:33.533Z",
    "updateLog": [
+    "2026-11-21T21:18:33.533Z",
     "2026-11-21T12:33:09.021Z",
     "2026-11-20T19:27:56.059Z",
     "2026-11-20T00:16:33.848Z",
