@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-21T05:22:50.255Z",
+ "updatedAt": "2026-11-21T14:05:16.713Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -129,7 +129,7 @@
    "universeId": 10772188709,
    "name": "Merge a horde of Easter eggs",
    "playing": 0,
-   "visits": 196,
+   "visits": 198,
    "favorites": 0,
    "up": 2,
    "down": 1,
@@ -149,14 +149,15 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "⛏️ Mining Tycoon: Stone Empire",
-   "playing": 2,
-   "visits": 14792,
-   "favorites": 470,
+   "playing": 33,
+   "visits": 15121,
+   "favorites": 479,
    "up": 10,
    "down": 5,
    "created": "2026-11-03T08:41:13.267Z",
-   "updated": "2026-11-20T19:27:56.059Z",
+   "updated": "2026-11-21T12:33:09.021Z",
    "updateLog": [
+    "2026-11-21T12:33:09.021Z",
     "2026-11-20T19:27:56.059Z",
     "2026-11-20T00:16:33.848Z",
     "2026-11-20T00:12:29.797Z",
@@ -182,6 +183,7 @@
    ],
    "icon": "https://tr.rbxcdn.com/180DAY-92367f97eb6e34acc4a227b609cc2a06/512/512/Image/Png/noFilter",
    "thumbs": [
+    "https://tr.rbxcdn.com/180DAY-f10c8fccb3c7b3639fa38622787888eb/768/432/Image/Png/noFilter",
     "https://tr.rbxcdn.com/180DAY-0d8c58e444a5a608477dfd725bcdd681/768/432/Image/Png/noFilter"
    ]
   }
