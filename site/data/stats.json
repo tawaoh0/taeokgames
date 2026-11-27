@@ -1,6 +1,6 @@
 {
  "groupId": "541274555",
- "updatedAt": "2026-11-27T01:26:50.080Z",
+ "updatedAt": "2026-11-27T16:01:35.010Z",
  "games": {
   "97611163590541": {
    "universeId": 10766423957,
@@ -47,7 +47,7 @@
    "universeId": 10768369970,
    "name": "Break up ores",
    "playing": 0,
-   "visits": 708,
+   "visits": 709,
    "favorites": 12,
    "up": 3,
    "down": 3,
@@ -149,9 +149,9 @@
   "72176707842436": {
    "universeId": 10774476701,
    "name": "⛏️ Mining Tycoon: Stone Empire",
-   "playing": 6,
-   "visits": 22499,
-   "favorites": 772,
+   "playing": 18,
+   "visits": 23418,
+   "favorites": 798,
    "up": 17,
    "down": 15,
    "created": "2026-11-03T08:41:13.267Z",
